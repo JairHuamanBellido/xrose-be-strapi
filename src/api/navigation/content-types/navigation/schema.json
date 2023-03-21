@@ -1,0 +1,35 @@
+{
+  "kind": "singleType",
+  "collectionName": "navigations",
+  "info": {
+    "singularName": "navigation",
+    "pluralName": "navigations",
+    "displayName": "🚅-main-navigation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "entryTitle": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string",
+      "required": true,
+      "private": true
+    },
+    "subpart_navigations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::subpart-navigation.subpart-navigation"
+    }
+  }
+}
