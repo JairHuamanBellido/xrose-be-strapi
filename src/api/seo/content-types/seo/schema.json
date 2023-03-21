@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "pages",
+  "collectionName": "seos",
   "info": {
-    "singularName": "page",
-    "pluralName": "pages",
-    "displayName": "📜-Page",
+    "singularName": "seo",
+    "pluralName": "seos",
+    "displayName": "🔍-SEO",
     "description": ""
   },
   "options": {
@@ -23,23 +23,20 @@
         }
       },
       "type": "string",
-      "private": true,
       "unique": true,
-      "required": true
+      "required": true,
+      "private": true
     },
-    "slug": {
+    "content": {
+      "type": "component",
+      "repeatable": false,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "string",
+      "component": "shared.seo",
       "required": true
-    },
-    "seo": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::seo.seo"
     }
   }
 }
